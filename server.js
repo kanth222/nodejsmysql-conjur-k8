@@ -4,7 +4,6 @@ const cors = require("cors");
 
 const app = express();
 
-const tut = require("./app/models/tutorial.model.js");
 
 
 var corsOptions = {
@@ -31,6 +30,8 @@ app.get("/", (req, res) => {
 // });
 
 app.get("/sec", async (req, res) => {
+const tut = require("./app/models/tutorial.model.js");
+
   // Generate a random id between 1 and 25 (inclusive)
   const randomId = Math.floor(Math.random() * 25) + 1;
 
